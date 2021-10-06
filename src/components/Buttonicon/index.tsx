@@ -6,16 +6,16 @@ import {
     View,
 } from 'react-native';
 
-import DiscordImg from '../../../assets/discord.png';
+import DiscordImg from '../../assets/discord.png';
 import { styles } from './styles';
 
 type Props = RectButtonProps & {
     title: string;
 }
 
-export function ButtonIcon({ title }: Props) {
+export function ButtonIcon({ title, ...rest }: Props) {
     return (
-        <RectButton style={styles.container} activeOpacity={0.5} >
+        <RectButton style={styles.container} activeOpacity={0.5} {...rest} >
             <View style={styles.iconWrapper}>
                 <Image source={DiscordImg} style={styles.icon} />
             </View>

@@ -10,7 +10,7 @@ import IllustrationImg from '../../assets/illustration.png'
 import { ButtonIcon } from '../../components/Buttonicon';
 import { styles } from './styles';
 
-export function SignIn(){
+export function SignIn() {
     const navigation = useNavigation();
 
     function handleSignIn() {
