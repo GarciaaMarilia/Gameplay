@@ -5,6 +5,6 @@ import { styles } from './styles';
 
 export function ListDivider() {
     return (
-        <View />
+        <View style={styles.container} />
     );
 }

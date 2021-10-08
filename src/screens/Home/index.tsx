@@ -49,6 +49,7 @@ export function Home() {
                 <Profile />
                 <ButtonAdd />
             </View>
+
             <CategorySelect
                 categorySelected={category}
                 setCategory={handleCategorySelect}
