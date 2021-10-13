@@ -9,9 +9,15 @@ import { Category } from '../Category';
 type Props = {
     categorySelected: string;
     setCategory: (categoryId: string) => void;
+    hasCheckBox: boolean;
 }
 
-export function CategorySelect({ categorySelected, setCategory }: Props) {
+export function CategorySelect({
+    categorySelected,
+    setCategory,
+    hasCheckBox = true,
+}: Props) {
+
     return (
         <ScrollView
             horizontal
