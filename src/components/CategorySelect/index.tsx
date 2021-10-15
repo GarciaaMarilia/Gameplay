@@ -20,10 +20,10 @@ export function CategorySelect({
 
     return (
         <ScrollView
-            horizontal
+            horizontal={true}
             style={styles.container}
             showsHorizontalScrollIndicator={false} // barra de rolagem
-            contentContainerStyle={{ paddingRight: -40 }}
+            contentContainerStyle={{ paddingRight: 34 }}
         >
             {
                 categories.map(category => (

@@ -47,7 +47,7 @@ export function Home() {
         categoryId === category ? setCategory('') : setCategory(categoryId);
     }
 
-    function handleAppointmentDetails(){
+    function handleAppointmentDetails() {
         navigation.navigate('AppointmentDetails');
     }
 
@@ -84,6 +84,7 @@ export function Home() {
                     showsVerticalScrollIndicator={false}
                 />
             </View>
+
         </Background>
 
     );

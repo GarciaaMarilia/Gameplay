@@ -35,6 +35,12 @@ export function AppointmentDetails() {
             username: 'Marília',
             avatar_url: 'https://github.com/GarciaaMarilia.png',
             status: 'offline'
+        },
+        {
+            id: '3',
+            username: 'Marília',
+            avatar_url: 'https://github.com/GarciaaMarilia.png',
+            status: 'offline'
         }
     ]
 
@@ -71,7 +77,7 @@ export function AppointmentDetails() {
 
             <ListHeader
                 title="Jogadores"
-                subtitle="Total 2"
+                subtitle="Total 3"
             />
 
             <FlatList

@@ -20,5 +20,6 @@ export const styles = StyleSheet.create({
     mathes: {
         marginTop: 24,
         marginLeft: 24,
+        marginRight: 20
     }
 });
