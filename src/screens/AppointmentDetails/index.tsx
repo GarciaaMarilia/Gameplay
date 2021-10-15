@@ -13,10 +13,12 @@ import { theme } from '../../global/styles/theme';
 import { styles } from './styles';
 import BannerImg from '../../assets/banner.png'
 
+import { ListDivider } from '../../components/ListDivider';
 import { Background } from '../../components/Background';
-import { Header } from '../../components/Header';
 import { ListHeader } from '../../components/ListHeader';
+import { ButtonIcon } from '../../components/Buttonicon';
 import { Member } from '../../components/Member';
+import { Header } from '../../components/Header';
 
 
 export function AppointmentDetails() {
@@ -69,7 +71,7 @@ export function AppointmentDetails() {
 
             <ListHeader
                 title="Jogadores"
-                subtitle="Total 3"
+                subtitle="Total 2"
             />
 
             <FlatList
@@ -78,7 +80,13 @@ export function AppointmentDetails() {
                 renderItem={({ item }) => (
                     <Member data={item} />
                 )}
+                ItemSeparatorComponent={() => <ListDivider />}
+                style={styles.members}
             />
+
+            <View style={styles.footer}>
+                <ButtonIcon title="Entrar na partida" />
+            </View>
 
         </Background>
     );
