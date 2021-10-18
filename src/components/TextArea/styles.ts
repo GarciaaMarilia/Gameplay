@@ -3,14 +3,18 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
     container: {
-        width: '100%',
-        height: 95,
         backgroundColor: theme.colors.secondary40,
-        color: theme.colors.heading,
-        borderRadius: 8,
+        borderColor: theme.colors.secondary50,
         fontFamily: theme.fonts.text400,
-        fontSize: 13,
+        color: theme.colors.heading,
+        textAlignVertical: 'top',
+        borderRadius: 8,
+        paddingLeft: 16,
+        paddingTop: 16,
+        borderWidth: 1,
         marginRight: 4,
-        textAlign: 'center',
+        width: '100%',
+        fontSize: 13,
+        height: 95,
     }
 })

@@ -4,9 +4,9 @@ import { RectButton } from 'react-native-gesture-handler';
 import {
     Text,
     View,
+    Platform,
     ScrollView,
     KeyboardAvoidingView,
-    Platform
 } from 'react-native';
 
 import { CategorySelect } from '../../components/CategorySelect';
@@ -29,6 +29,10 @@ export function AppointmentCreate() {
 
     function handleOpenGuilds() {
         setOpenGuildsModal(true);
+    }
+
+    function handleCloseGuilds() {
+        setOpenGuildsModal(false);
     }
 
     function handleGuildSelect(guildSelect: GuildProps) {
@@ -81,13 +85,12 @@ export function AppointmentCreate() {
                                 color={theme.colors.heading}
                                 size={18}
                             />
-
                         </View>
                     </RectButton>
 
                     <View style={styles.field}>
                         <View>
-                            <Text style={styles.label}>
+                            <Text style={[styles.label, { marginBottom: 12 }]}>
                                 Dia e mês
                             </Text>
                             <View style={styles.column}>
@@ -100,7 +103,7 @@ export function AppointmentCreate() {
                         </View>
 
                         <View>
-                            <Text style={styles.label}>
+                            <Text style={[styles.label, { marginBottom: 12 }]}>
                                 Hora e Minuto
                             </Text>
                             <View style={styles.column}>
@@ -136,7 +139,7 @@ export function AppointmentCreate() {
                 </View>
             </ScrollView>
 
-            <ModalView visible={opendGuildsModal}>
+            <ModalView visible={opendGuildsModal} closeModal={handleCloseGuilds}>
                 <Guilds handleGuildSelect={handleGuildSelect} />
             </ModalView>
         </KeyboardAvoidingView>
