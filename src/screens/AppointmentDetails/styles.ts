@@ -20,9 +20,10 @@ export const styles = StyleSheet.create({
     },
 
     subtitle: {
-        fontSize: 14,
+        fontSize: 13,
         fontFamily: theme.fonts.text400,
-        color: theme.colors.heading
+        color: theme.colors.heading,
+        lineHeight: 21,
     },
 
     bannerContent: {

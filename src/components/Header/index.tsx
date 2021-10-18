@@ -21,7 +21,7 @@ export function Header({ title, action }: Props) {
 
     const navigation = useNavigation();
 
-    function handleGoBack(){
+    function handleGoBack() {
         navigation.goBack();
     }
 
@@ -44,10 +44,13 @@ export function Header({ title, action }: Props) {
             </Text>
 
             {
-                action &&
-                <View>
-                    {action}
-                </View>
+                action
+                    ?
+                    <View>
+                        {action}
+                    </View>
+                    :
+                    <View style={{ width: 24 }} />
             }
         </LinearGradient>
     );

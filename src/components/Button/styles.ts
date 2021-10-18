@@ -3,33 +3,33 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
     container: {
+        backgroundColor: theme.colors.primary,
+        alignItems: 'center',
+        flexDirection: 'row',
+        borderRadius: 8,
         width: '100%',
         height: 56,
-        backgroundColor: theme.colors.primary,
-        borderRadius: 8,
-        flexDirection: 'row',
-        alignItems: 'center',
     },
 
     iconWrapper: {
-        width: 56,
-        height: 56,
+        borderColor: theme.colors.line,
         justifyContent: 'center',
         alignItems: 'center',
         borderRightWidth: 1,
-        borderColor: theme.colors.line,
+        height: 56,
+        width: 56,
     },
 
     icon: {
+        height: 18,
         width: 24,
-        height: 18
     },
 
     title: {
-        flex: 1,
-        color: theme.colors.heading,
         fontFamily: theme.fonts.text500,
-        fontSize: 15,
+        color: theme.colors.heading,
         textAlign: 'center',
+        fontSize: 15,
+        flex: 1,
     },
 });

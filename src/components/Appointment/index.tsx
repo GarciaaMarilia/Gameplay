@@ -1,19 +1,23 @@
 import React from 'react';
-import { RectButton, RectButtonProps } from 'react-native-gesture-handler'
-import { View, Text } from 'react-native';
-import { styles } from './styles';
-import PlayerSvg from '../../assets/player.svg';
-import CalendarSvg from '../../assets/calendar.svg';
-import { GuildIcon } from '../GuildIcon';
-import { theme } from '../../global/styles/theme';
-import { categories } from '../../utils/categories'
 
-export type GuildProps = {
-    id: string;
-    name: string;
-    icon: null,
-    owner: boolean;
-}
+import {
+    RectButton,
+    RectButtonProps
+} from 'react-native-gesture-handler';
+import {
+    View,
+    Text
+} from 'react-native';
+
+import { categories } from '../../utils/categories'
+import { GuildIcon } from '../GuildIcon';
+import { GuildProps } from '../Guild';
+
+import CalendarSvg from '../../assets/calendar.svg';
+import PlayerSvg from '../../assets/player.svg';
+
+import { theme } from '../../global/styles/theme';
+import { styles } from './styles';
 
 export type AppointmentProps = {
     id: string;
@@ -34,7 +38,7 @@ export function Appointment({ data, ...rest }: Props) {
     return (
         <RectButton {...rest}>
             <View style={styles.container}>
-                <GuildIcon />
+                <GuildIcon guildId={data.guild.id} iconId={data.guild.icon} />
                 <View style={styles.content}>
                     <View style={styles.header}>
                         <Text style={styles.title}>
