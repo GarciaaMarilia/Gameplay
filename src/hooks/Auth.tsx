@@ -6,6 +6,18 @@ import React,
     useState,
 } from 'react';
 
+import * as AuthSession from 'expo-auth-session';
+
+import {
+    RESPONSE_TYPE,
+    REDIRECT_URI,
+    CLIENT_ID,
+    CDN_IMAGE,
+    SCOPE,
+} from '../components/Configs';
+
+import { api } from '../Services/api';
+
 type User = {
     firstName: string;
     username: string;
@@ -25,8 +37,23 @@ type AuthProviderProps = {
 
 export const AuthContext = createContext({} as AuthContextData);
 
-function AuthProvider ({ children }: AuthProviderProps)  {
+function AuthProvider({ children }: AuthProviderProps) {
     const [user, setUser] = useState<User>({} as User);
+    const [loading, setLoading] = useState(false);
+
+    function SignIn() {
+        try {
+            setLoading(true);
+
+            const authUrl = `${api.defaults.baseURL}/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`;
+
+            AuthSession
+                .startAsync({ authUrl })
+
+        } catch (error) {
+
+        }
+    }
 
     return (
         <AuthContext.Provider value={{
@@ -37,7 +64,7 @@ function AuthProvider ({ children }: AuthProviderProps)  {
     )
 }
 
-function useAuth(){
+function useAuth() {
     const context = useContext(AuthContext);
 
     return context;
