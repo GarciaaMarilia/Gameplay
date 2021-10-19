@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
     View,
     Text,
@@ -6,13 +7,16 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import IllustrationImg from '../../assets/illustration.png'
 import { ButtonIcon } from '../../components/Buttonicon';
-import { styles } from './styles';
+import { useAuth } from '../../hooks/Auth';
+
+import { IllustrationImg } from '../../assets/illustration.png';
 import { Background } from '../../components/Background';
+import { styles } from './styles';
 
 export function SignIn() {
     const navigation = useNavigation();
+    const { user } = useAuth();
 
     function handleSignIn() {
         navigation.navigate('Home');
@@ -24,6 +28,7 @@ export function SignIn() {
                 <Image
                     source={IllustrationImg}
                     style={styles.image}
+                    resizeMode="stretch"
                 />
 
                 <View style={styles.content}>

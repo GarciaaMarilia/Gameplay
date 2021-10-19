@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
@@ -7,9 +7,9 @@ export const styles = StyleSheet.create({
     },
 
     label: {
-        fontSize: 18,
         fontFamily: theme.fonts.title700,
         color: theme.colors.heading,
+        fontSize: 18,
     },
 
     form: {
@@ -18,35 +18,36 @@ export const styles = StyleSheet.create({
     },
 
     select: {
+        borderColor: theme.colors.secondary50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        overflow: 'hidden',
+        paddingRight: 25,
+        borderRadius: 8,
+        borderWidth: 1,
         width: '100%',
         height: 68,
-        flexDirection: 'row',
-        borderColor: theme.colors.secondary50,
-        borderWidth: 1,
-        borderRadius: 8,
-        alignItems: 'center',
-        paddingRight: 25,
-        overflow: 'hidden'
     },
 
     image: {
-        width: 64,
-        height: 68,
+        borderBottomColor: theme.colors.secondary50,
         backgroundColor: theme.colors.secondary50,
+        borderRadius: 8,
         borderWidth: 1,
-        borderRadius: 8
+        height: 68,
+        width: 64,
     },
 
     selectBody: {
-        flex: 1,
         alignItems: 'center',
+        flex: 1,
     },
 
     field: {
-        width: '100%',
-        flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 30
+        flexDirection: 'row',
+        marginTop: 30,
+        width: '100%',
     },
 
     column: {
@@ -55,16 +56,16 @@ export const styles = StyleSheet.create({
     },
 
     divider: {
+        fontFamily: theme.fonts.text500,
+        color: theme.colors.highlight,
         marginRight: 4,
         fontSize: 15,
-        fontFamily: theme.fonts.text500,
-        color: theme.colors.highlight
     },
 
     caracteresLimit: {
         fontFamily: theme.fonts.text400,
-        fontSize: 13,
         color: theme.colors.highlight,
+        fontSize: 13,
     },
 
     footer: {
